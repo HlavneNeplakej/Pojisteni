@@ -30,5 +30,5 @@ class Konzole:
                 else:
                     print("Sbohem!")
                     break
-            except ValueError as ve:
+            except ValueError:
                 print("Zadejte číslo!\n")

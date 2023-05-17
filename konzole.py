@@ -27,8 +27,10 @@ class Konzole:
                 elif vstup == 3:
                     db.vyhledej_pojisteneho()
                     print("")
-                else:
+                elif vstup == 4:
                     print("Sbohem!")
                     break
+                else:
+                    print("Zadejte validní volbu!\n")
             except ValueError:
                 print("Zadejte číslo!\n")

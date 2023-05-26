@@ -3,7 +3,7 @@ from pojisteni import Databaze
 db = Databaze()
 
 
-class Konzole:
+class Evidence:
 
     def pracuj(self):
         print("---------------------")

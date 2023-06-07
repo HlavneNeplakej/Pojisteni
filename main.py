@@ -1,5 +1,11 @@
-from konzole import Konzole
+from evidence import Evidence
 
-konzole = Konzole()
+konzole = Evidence()
 
 konzole.pracuj()
+
+
+"""
+pojistenec jako objekt - konstruktor str
+oddelit backend / frontend -> prostrednik mezi evidenci a konzoli
+"""

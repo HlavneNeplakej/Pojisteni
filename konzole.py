@@ -1,7 +1,8 @@
 from pojisteni import Databaze
+from pojistenec import Pojistenec
 
 db = Databaze()
-
+pojistenec = Pojistenec()
 
 class Konzole:
 
@@ -16,9 +17,11 @@ class Konzole:
 
         while vstup != 4:
             try:
-                vstup = int(input("1 - Přidat nového pojistného\n2 - Vyhledat všechny pojištěné\n3 - Vyhledat pojištěného\n4 - Konec\n"))
+                vstup = int(input("1 - Přidat nového pojistného\n2 - Vyhledat všechny pojištěné\n"
+                                  "3 - Vyhledat pojištěného\n4 - Konec\n"))
                 if vstup == 1:
-                    db.pridej_pojisteneho()
+                    pojistenec.pridej_pojisteneho()
+                    db.pridej_pojisteneho(pojistenec)
                     print("\nData byla vložena do databáze!\n")
                     continue
                 elif vstup == 2:

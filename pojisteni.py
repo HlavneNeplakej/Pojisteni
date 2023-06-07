@@ -1,3 +1,4 @@
+from pojistenec import Pojistenec
 import sqlite3
 conn = sqlite3.connect('uzivatele.db')
 cur = conn.cursor()
@@ -13,12 +14,9 @@ else:
 
 class Databaze:
 
-    def pridej_pojisteneho(self):
-        self.jmeno = input("Zadejte jméno pojištěného:\n")
-        self.prijmeni = input("Zadejte příjmení pojištěného:\n")
-        self.telefon = input("Zadejte telefonní číslo:\n")
-        self.vek = input("Zadejte věk:\n")
-        params = (self.jmeno, self.prijmeni, self.telefon, self.vek)
+    def pridej_pojisteneho(self, Pojistenec):
+        self.pojistenec = Pojistenec
+        params = (Pojistenec.jmeno, Pojistenec.prijmeni, Pojistenec.telefon, Pojistenec.vek)
         cur.execute(f'INSERT INTO pojistenci ("jmeno", "prijmeni", "telefon", "vek") VALUES (?, ?, ?, ?)', params)
         conn.commit()
 
